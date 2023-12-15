@@ -4,6 +4,12 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+function getPlayersChoice() {
+    var value = prompt("Rock, Paper or Scissors?");
+    value = value.toLowerCase();
+    return value
+}
+
 
 function playGame (playerSelection, computerSelection) {
     if ((playerSelection === "rock" && computerSelection === "paper")||(playerSelection === "paper" && computerSelection === "scissors")||(playerSelection === "scissors" && computerSelection === "rock")){
@@ -23,6 +29,6 @@ function playGame (playerSelection, computerSelection) {
 }
 
 
-const playerSelection = "paper";
+const playerSelection = getPlayersChoice();
 const computerSelection = getComputerChoice();
 console.log(playGame(playerSelection, computerSelection));
