@@ -6,13 +6,18 @@ function getComputerChoice() {
 
 
 function playGame (playerSelection, computerSelection) {
-    if ((playerSelection === "rock" && computerSelection === "paper")||(playerSelection === "paper" && computerSelection === "scissor")||(playerSelection === "scissor" && computerSelection === "rock")){
-        console.log("You lost")
+    if ((playerSelection === "rock" && computerSelection === "paper")||(playerSelection === "paper" && computerSelection === "scissors")||(playerSelection === "scissors" && computerSelection === "rock")){
+        console.log("You lost");
+        console.log(computerSelection);
+        console.log(playerSelection);
+    } else if (playerSelection ===computerSelection) {
+        console.log("It's a tie")
         console.log(computerSelection)
-        console.log(playerSelection)
+        console.log(playerSelection);
     } else {
         console.log("You won")
         console.log(computerSelection)
+        console.log(playerSelection);
     }
     
 }
