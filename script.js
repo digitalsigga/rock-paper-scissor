@@ -4,11 +4,20 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
-function playGame (playerSelection, computerSelection) {
-    if playerSelection 
 
+function playGame (playerSelection, computerSelection) {
+    if ((playerSelection === "rock" && computerSelection === "paper")||(playerSelection === "paper" && computerSelection === "scissor")||(playerSelection === "scissor" && computerSelection === "rock")){
+        console.log("You lost")
+        console.log(computerSelection)
+        console.log(playerSelection)
+    } else {
+        console.log("You won")
+        console.log(computerSelection)
+    }
+    
 }
 
-const playerSelection = "rock";
+
+const playerSelection = "paper";
 const computerSelection = getComputerChoice();
 console.log(playGame(playerSelection, computerSelection));
