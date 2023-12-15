@@ -1,3 +1,7 @@
+let playerSelection;
+const computerSelection = getComputerChoice();
+
+
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
     let randomNumber = Math.floor(Math.random() * 3);
@@ -10,9 +14,10 @@ function getPlayersChoice() {
     return value
 }
 
+let player = 0; 
+let computer = 0;
+
 function playGame (playerSelection, computerSelection) {
-    let player = 0; 
-    let computer = 0;
     
     if ((playerSelection === "rock" && computerSelection === "paper")||(playerSelection === "paper" && computerSelection === "scissors")||(playerSelection === "scissors" && computerSelection === "rock")){
         console.log(computerSelection);
@@ -29,17 +34,15 @@ function playGame (playerSelection, computerSelection) {
         console.log("You won")
         player = player + 1;
     }
-
   
-    
     console.log(`Player: ${player} & Computer ${computer}`);
 
 }
 
 function game(n) {
     for (let i = 1; i <= n; i++){
-        playGame(playerSelection, computerSelection); 
         playerSelection = getPlayersChoice();
+        playGame(playerSelection, computerSelection); 
     }
     if (player > computer) {
         console.log("Player won");
@@ -50,8 +53,7 @@ function game(n) {
     }
 }
 
-let playerSelection;
-const computerSelection = getComputerChoice();
-console.log(playGame(playerSelection, computerSelection));
+
+// console.log(playGame(playerSelection, computerSelection));
 
 game(5);
